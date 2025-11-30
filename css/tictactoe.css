@@ -89,6 +89,75 @@ body{
     border-radius: 40%;
     color: rgb(15, 12, 4);
     font-family:'Cinzel',serif;
-    display: flex;
-   
+    
+    
+  }
+  #newgm{
+    padding: 2rem;
+    font-size: 1.25rem;
+    background-color: #ff0000;
+    border-radius: 40%;
+    color: rgb(15, 12, 4);
+    font-family:'Cinzel',serif;
+    
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+  #msg{
+    font-family: 'Cinzel', serif;
+  font-size: 60px;
+  color: #e60000;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 3px;
+
+  /* BLOOD GLOW */
+  text-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 40px #b30000,
+    0 0 60px #800000;
+
+  /* BLOODY DRIP EFFECT */
+  position: relative;
+  animation: bloodShake 3s ease-in-out infinite;
+}
+
+.bloody::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 35px;
+  background: linear-gradient(#e60000, transparent);
+  border-radius: 3px;
+  top: 100%;
+  animation: drip 1.8s infinite ease-in-out;
+}
+
+/* DRIPPING BLOOD */
+@keyframes drip {
+  0% { height: 0; opacity: 1; }
+  50% { height: 35px; opacity: 1; }
+  100% { height: 0; opacity: 0; }
+}
+
+/* SLIGHT SHAKE (Stranger Things scary motion) */
+@keyframes bloodShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+}
+.msgdabba{
+  height: 40vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.hide{
+  display: none;
 }
