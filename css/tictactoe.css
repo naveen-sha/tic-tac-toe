@@ -4,14 +4,63 @@
 
 }
 body{
-    background-color: lightseagreen;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right,black,rgb(107, 0, 0),rgb(129, 21, 21),rgb(104, 7, 7),black);
     text-align: center;
+    background-size: 400% 400%;
+    animation:   moveBg 30s  ease infinite;
+    
+
 }
+@keyframes moveBg{
+    0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.text{
+     font-family: 'Cinzel', serif;   /* closest free font */
+  font-size: 80px;
+  font-weight: 700;
+  color: #ff0000;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Main neon glow */
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #8b0000,
+    0 0 40px #8b0000,
+    0 0 80px #8b0000;
+
+  /* Optional outline */
+  -webkit-text-stroke: 2px #000;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 25px #ff0000; }
+  5% { opacity: 0.4; }
+  10% { opacity: 1; }
+  15% { opacity: 0.3; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
 .container{
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .game{
     height: 60vmin;
@@ -20,8 +69,26 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5vmin;}
+    gap: 1.5vmin;
+    border-radius: 30%;
+}
 .box{
     height: 18vmin;
     width: 18vmin;
+    border-radius: 25%;
+    border: none;
+    font-size:9vmin ;
+    box-shadow:0 0 5rem rgba(0,0,0,4);
+    color: #8b0000;
+    background-color:#ffff;
+}
+#reset-button{
+    padding: 2rem;
+    font-size: 1.25rem;
+    background-color: #ff0000;
+    border-radius: 40%;
+    color: rgb(15, 12, 4);
+    font-family:'Cinzel',serif;
+    display: flex;
+   
 }
