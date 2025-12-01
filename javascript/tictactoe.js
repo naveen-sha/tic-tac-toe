@@ -27,7 +27,7 @@ boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(player){
             box.innerText="O";
-            player=false;
+            player=false; 
         }else{
             box.innerText="X";
             player=true;
